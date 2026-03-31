@@ -1,0 +1,43 @@
+name: ado_hummingbird
+display_name: ADO Hummingbird
+version: 0.2.0
+
+author:
+  name: "Marco Giuliani | IT di ADO Medical s.r.l."
+  email: "webmaster@adomedical.it"
+  url: "https://www.adomedical.it"
+
+parent: hummingbird
+
+meta:
+  compatibility:
+    from: 9.1.0
+    to: ~
+    framework: bootstrap-v5.3.3
+
+assets:
+  use_parent_assets: true
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+    HOME_FEATURED_NBR: 4
+    NEW_PRODUCTS_NBR: 4
+    BLOCKSPECIALS_SPECIALS_NBR: 4
+    PS_BLOCK_BESTSELLERS_TO_DISPLAY: 4
+    PRODUCTS_VIEWED_NBR: 4
+    CATEGORYPRODUCTS_DISPLAY_PRODUCTS: 4
+    PSR_ICON_COLOR: "#0b69f6"
+    PSR_TEXT_COLOR: "#212529"
+
+theme_settings:
+  rtl_generation: false
+  default_layout: layout-full-width
+  layouts:
+    category: layout-full-width
+    best-sales: layout-full-width
+    new-products: layout-full-width
+    prices-drop: layout-full-width
+    contact: layout-left-column
+    manufacturer: layout-full-width
+    supplier: layout-full-width
