@@ -119,6 +119,10 @@ global_settings:
       width: 2000
       height: 400
       scope: [categories]
+    brand_default:
+      width: 202
+      height: 150
+      scope: [manufacturers]
 
 theme_settings:
   rtl_generation: false

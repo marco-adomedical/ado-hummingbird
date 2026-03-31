@@ -16,7 +16,7 @@
     <div class="ado-home-brands__grid">
       {foreach from=$brands item=brand}
         {assign var="originalManufacturerId" value=$brand.id_manufacturer-70000}
-        {assign var="brandLogo" value="{$urls.base_url}img/m/{$originalManufacturerId|intval}-medium_default.jpg"}
+        {assign var="brandLogo" value="{$urls.base_url}img/m/{$originalManufacturerId|intval}-brand_default.jpg"}
 
         <a class="ado-home-brands__item" href="{$brand.link|escape:'html':'UTF-8'}"
           title="{$brand.name|escape:'html':'UTF-8'}" aria-label="{$brand.name|escape:'html':'UTF-8'}">
