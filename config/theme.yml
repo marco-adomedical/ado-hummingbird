@@ -44,6 +44,16 @@ global_settings:
     PSR_ICON_COLOR: "#0b69f6"
     PSR_TEXT_COLOR: "#212529"
 
+  hooks:
+    custom_hooks:
+      - name: displayHeaderActions
+        title: displayHeaderActions
+        description: Header actions area for language, account, cart and related modules
+
+      - name: displayHeaderSearchLinks
+        title: displayHeaderSearchLinks
+        description: Small links shown below the desktop search bar
+
   image_types:
     cart_default:
       width: 125
