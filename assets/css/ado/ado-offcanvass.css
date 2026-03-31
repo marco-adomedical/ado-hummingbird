@@ -1,0 +1,38 @@
+/* ===================================
+   H: MOBILE / TABLET SEARCH OFFCANVAS
+   =================================== */
+
+.ado-search-offcanvas {
+  z-index: 1080;
+}
+
+.ado-search-offcanvas .offcanvas-header {
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ado-search-offcanvas__form {
+  flex: 1 1 auto;
+}
+
+.ado-search-offcanvas__icon {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  transform: translateY(-50%);
+  color: var(--bs-primary);
+}
+
+.ado-search-offcanvas__input {
+  min-height: 48px;
+  padding-left: 2.75rem;
+  border: 2px solid var(--bs-primary);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.ado-search-offcanvas__input:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(255, 126, 0, 0.15);
+  outline: 0;
+}

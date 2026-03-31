@@ -1,0 +1,111 @@
+/* ===================================
+   H: ADO ENTRYPOINT CSS
+   =================================== */
+
+@import url("./ado/ado-header.css");
+@import url("./ado/ado-topmenu.css");
+@import url("./ado/ado-breadcrumbs.css");
+@import url("./ado/ado-brand_grid.css");
+@import url("./ado/ado-cms.css");
+@import url("./ado/ado-footer.css");
+@import url("./ado/ado-offcanvass.css");
+
+.page-content {
+  margin-top: 1.5rem;
+}
+/* ===================================
+   H: GRIGLIA LISTA PROD.
+   =================================== */
+/* Desktop grande mettiamo 5 prodotti */
+@media (min-width: 1200px) {
+  .layout-full-width .products {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ===================================
+   H: PAGINA PROD.
+   =================================== */
+@media (min-width: 992px) {
+  .page-product .product__bottom {
+    display: block;
+    margin-block-start: 1.5rem;
+  }
+}
+.product__accordion .accordion-item {
+  margin-bottom: 2rem;
+}
+/* H: ADO SALE MODE */
+
+.ado-product-description-wrapper--discontinued {
+  opacity: 0.55;
+}
+
+.ado-sale-mode-discontinued-notice {
+  border-left: 4px solid var(--bs-warning);
+}
+
+.ado-sale-mode-listing-message {
+  line-height: 1.3;
+}
+/*
+===================================
+H: BRAND PAGE HEADER
+===================================
+*/
+
+.ado-brand-header {
+  margin-bottom: 2rem;
+}
+
+.ado-brand-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ado-brand-header__logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+}
+
+.ado-brand-header__logo img {
+  display: block;
+  max-width: 160px;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.ado-brand-header__content {
+  min-width: 0;
+}
+
+.ado-brand-header__title {
+  margin-bottom: 0.5rem;
+}
+
+.ado-brand-header__description {
+  color: var(--bs-secondary-color);
+}
+
+.ado-brand-header__description > *:last-child,
+.ado-brand-header__body > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .ado-brand-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ado-brand-header__logo img {
+    max-width: 140px;
+    max-height: 56px;
+  }
+}

@@ -1,0 +1,45 @@
+/* H: ADO CMS - rifiniture minime per pagine contenuto */
+
+.ado-cms-page .ado-cms-section + .ado-cms-section {
+  margin-top: 3rem;
+}
+
+.ado-cms-section {
+  margin-bottom: 3rem;
+}
+
+/* Box contatti / evidenza */
+
+.ado-cms-contact-box {
+  border-left: 4px solid var(--bs-primary);
+}
+
+/* Note legali */
+
+.ado-cms-legal {
+  font-size: 0.95rem;
+}
+
+.ado-cms-legal p:last-child {
+  margin-bottom: 0;
+}
+
+/* Liste CMS un po' più ariose */
+
+.ado-cms-page ul li + li,
+.ado-cms-page ol li + li {
+  margin-top: 0.35rem;
+}
+
+/* CTA nei box CMS */
+
+.ado-cms-contact-box .btn {
+  margin-top: 0.5rem;
+}
+
+/* Icons */
+
+.ado-cms-page .material-icons {
+  font-size: 32px;
+  line-height: 1;
+}

@@ -1,0 +1,139 @@
+/*
+===================================
+H: ADO FOOTER
+===================================
+Footer custom del sito.
+Struttura semplice, commerciale e responsive.
+*/
+
+.ado-footer {
+  margin-top: 0;
+}
+
+.ado-footer__main {
+  padding: 48px 0 32px;
+  background: #26211d;
+  color: #f3eee8;
+}
+
+.ado-footer__grid {
+  row-gap: 32px;
+}
+
+.ado-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ado-footer__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ado-footer__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ado-footer__links,
+.ado-footer__contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ado-footer__links li,
+.ado-footer__contacts li {
+  margin-bottom: 10px;
+}
+
+.ado-footer__links a,
+.ado-footer__contacts a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ado-footer__links a:hover,
+.ado-footer__contacts a:hover {
+  color: var(--bs-primary);
+}
+
+.ado-footer__after {
+  margin-top: 32px;
+}
+
+.ado-footer__bottom {
+  padding: 16px 0;
+  background: #1f1a17;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ado-footer__bottom-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ado-footer__bottom-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 767.98px) {
+  .ado-footer__main {
+    padding: 36px 0 24px;
+  }
+
+  .ado-footer__grid {
+    row-gap: 24px;
+  }
+
+  .ado-footer__col {
+    gap: 10px;
+  }
+}
+/*
+===================================
+H: FOOTER SOCIAL
+===================================
+*/
+
+.ado-footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.25rem;
+}
+
+.ado-footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ado-footer__social-link svg {
+  display: block;
+  fill: currentColor;
+}
+
+.ado-footer__logo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 56px;
+}
+
+.ado-footer__contact-list {
+  margin-bottom: 1rem;
+}

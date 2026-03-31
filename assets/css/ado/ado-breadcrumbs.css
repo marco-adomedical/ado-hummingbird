@@ -1,0 +1,59 @@
+/* =========================================================
+   H: BREADCRUMB TYP.
+========================================================= */
+
+.breadcrumb,
+.breadcrumb-item,
+[aria-label="Breadcrumb"] {
+  font-size: var(--ado-font-size-sm);
+  line-height: 1.4;
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+  color: var(--ado-text-muted);
+}
+
+.breadcrumb-item.active {
+  color: var(--ado-text-main);
+  font-weight: var(--ado-font-weight-medium);
+}
+/* ===================================
+   H: BREADC. RESPONSIVE
+   =================================== */
+
+@media (max-width: 1199.98px) {
+  .breadcrumb__wrapper {
+    background-color: var(--ado-text-main);
+  }
+  .breadcrumb {
+    margin-bottom: 0;
+    padding: 0.85rem 0;
+    background-color: var(--ado-text-main);
+    color: var(--ado-bg-soft);
+    border-radius: 0;
+  }
+
+  .breadcrumb-item,
+  .breadcrumb-item span,
+  .breadcrumb-link,
+  .breadcrumb-link span {
+    color: var(--ado-bg-soft);
+  }
+
+  .breadcrumb-link {
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover,
+  .breadcrumb-link:focus,
+  .breadcrumb-link:hover span,
+  .breadcrumb-link:focus span {
+    color: var(--ado-primary-hover) !important;
+    text-decoration: none;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

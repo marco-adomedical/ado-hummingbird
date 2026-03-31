@@ -1,0 +1,274 @@
+/* ===================================
+   H: TOP MENU DESKTOP
+   =================================== */
+
+/* container menu */
+.header-nav-full-width {
+  background-color: var(--ado-text-main);
+  color: var(--ado-bg-soft);
+}
+
+/* reset */
+.header-nav-full-width .ps-mainmenu {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* nav desktop */
+.header-nav-full-width .ps-mainmenu__desktop {
+  display: block !important;
+  width: 100%;
+}
+
+/* griglia 6 colonne */
+.header-nav-full-width .ps-mainmenu__tree {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  width: 100%;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* item */
+.header-nav-full-width .ps-mainmenu__tree-item {
+  min-width: 0;
+}
+
+.header-nav-full-width .ps-mainmenu__tree-item-wrapper {
+  height: 100%;
+}
+
+/* link */
+.header-nav-full-width .ps-mainmenu__tree-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0.85rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--ado-bg-soft);
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+/* hover */
+.header-nav-full-width .ps-mainmenu__tree-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--ado-bg-soft);
+}
+
+/* focus */
+.header-nav-full-width .ps-mainmenu__tree-link:focus,
+.header-nav-full-width .ps-mainmenu__tree-link:focus-visible {
+  outline: 0;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--ado-bg-soft);
+}
+
+/* active */
+.header-nav-full-width
+  .ps-mainmenu__tree-item.current
+  > .ps-mainmenu__tree-item-wrapper
+  > .ps-mainmenu__tree-link,
+.header-nav-full-width .ps-mainmenu__tree-link[aria-current="page"],
+.header-nav-full-width .ps-mainmenu__tree-link.active {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--ado-bg-soft);
+  box-shadow: inset 0 -3px 0 0 var(--bs-primary);
+}
+
+/* niente dropdown desktop */
+.header-nav-full-width .ps-mainmenu__submenu,
+.header-nav-full-width .dropdown-menu {
+  display: none !important;
+}
+
+/* ===================================
+   H: TABLET / MOBILE
+   =================================== */
+
+@media (max-width: 1199.98px) {
+  /* non nascondere il wrapper:
+     serve a mantenere vivo l'offcanvas mobile */
+  .header-nav-full-width {
+    background: transparent;
+  }
+
+  /* nascondi solo la parte desktop visibile */
+  .header-nav-full-width .ps-mainmenu__desktop,
+  .header-nav-full-width .ps-mainmenu__tree {
+    display: none !important;
+  }
+}
+/* ===================================
+   H: BURGER MENU / OFFCANVAS
+   =================================== */
+
+#mobileMenu.ps-mainmenu--mobile.offcanvas {
+  background-color: var(--ado-text-main);
+  color: var(--ado-bg-soft);
+  border-right: 0;
+}
+
+#mobileMenu .offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#mobileMenu .btn-close {
+  filter: invert(1) opacity(0.8);
+  box-shadow: none;
+}
+
+#mobileMenu .btn-close:hover,
+#mobileMenu .btn-close:focus {
+  filter: invert(1) opacity(1);
+  box-shadow: none;
+  outline: 0;
+}
+
+/* ===================================
+   H: BURGER MENU - BODY
+   =================================== */
+
+#mobileMenu .ps-mainmenu__mobile {
+  padding: 0.75rem 0;
+}
+
+#mobileMenu .ps-mainmenu__mobile .list-unstyled {
+  margin: 0;
+  padding: 0;
+}
+
+#mobileMenu .ps-mainmenu__mobile li {
+  margin: 0;
+  padding: 0;
+}
+
+/* link principali */
+#mobileMenu .ps-mainmenu__mobile a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0.9rem 1.25rem;
+  color: var(--ado-bg-soft);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+#mobileMenu .ps-mainmenu__mobile a:hover,
+#mobileMenu .ps-mainmenu__mobile a:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--ado-bg-soft);
+  text-decoration: none;
+  padding-left: 1.45rem;
+  outline: 0;
+}
+
+/* voce attiva / corrente */
+#mobileMenu .ps-mainmenu__mobile .current > a,
+#mobileMenu .ps-mainmenu__mobile a[aria-current="page"],
+#mobileMenu .ps-mainmenu__mobile a.active {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--ado-bg-soft);
+  box-shadow: inset 3px 0 0 0 var(--bs-primary);
+}
+
+/* eventuali frecce o icone interne */
+#mobileMenu .ps-mainmenu__mobile .material-icons,
+#mobileMenu .ps-mainmenu__mobile i {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ===================================
+   H: BURGER MENU - BACK BUTTON
+   =================================== */
+
+#mobileMenu .ps-mainmenu__back-button {
+  min-height: 2rem;
+}
+
+#mobileMenu .ps-mainmenu__back-button .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ado-bg-soft);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+#mobileMenu .ps-mainmenu__back-button .btn:hover,
+#mobileMenu .ps-mainmenu__back-button .btn:focus {
+  color: var(--ado-bg-soft);
+  text-decoration: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+/* ===================================
+   H: BURGER MENU - ADDITIONALS
+   =================================== */
+
+#mobileMenu .ps-mainmenu__additionnals {
+  padding: 1rem 1.25rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* se ci finiscono lingua / valuta / contatti */
+#mobileMenu .ps-mainmenu__additionnals,
+#mobileMenu .ps-mainmenu__additionnals a,
+#mobileMenu .ps-mainmenu__additionnals .form-select {
+  color: var(--ado-bg-soft);
+}
+
+#mobileMenu .ps-mainmenu__additionnals .form-select {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+#mobileMenu .ps-mainmenu__additionnals .form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(255, 126, 0, 0.15);
+  outline: 0;
+}
+
+/* ===================================
+   H: BURGER MENU - WIDTH
+   =================================== */
+
+@media (max-width: 767.98px) {
+  #mobileMenu {
+    width: min(88vw, 360px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #mobileMenu {
+    width: min(420px, 80vw);
+  }
+}

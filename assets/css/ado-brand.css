@@ -1,0 +1,665 @@
+/* =========================================================
+   H: ADO BRAND
+   TOKENS / COLOR SYSTEM
+   File: ado-brand.css
+   Scopo:
+   - definire i colori base del brand
+   - mappare le variabili Bootstrap 5.3
+   - sovrascrivere in modo centralizzato Hummingbird/Bootstrap
+========================================================= */
+
+:root {
+  /* =========================================================
+   H: COLORI ADO
+========================================================= */
+  --ado-primary: #f07d00;
+  --ado-primary-hover: #ff9524;
+  --ado-bg-soft: #fff9f2;
+  --ado-text-muted: #75685b;
+  --ado-text-main: #2a2723;
+
+  /* SUPPORT / STATUS */
+  --ado-success: #2e7d32;
+  --ado-success-bg: #edf7ed;
+  --ado-success-border: #c8e6c9;
+  --ado-success-text: #1b5e20;
+
+  --ado-warning: #ed6c02;
+  --ado-warning-bg: #fff4e5;
+  --ado-warning-border: #ffddb0;
+  --ado-warning-text: #9a4600;
+
+  --ado-danger: #d32f2f;
+  --ado-danger-bg: #fdecea;
+  --ado-danger-border: #f5c2c7;
+  --ado-danger-text: #842029;
+
+  --ado-info: #0288d1;
+  --ado-info-bg: #e1f5fe;
+  --ado-info-border: #b6e3f9;
+  --ado-info-text: #055160;
+
+  /* NEUTRALS */
+  --ado-white: #ffffff;
+  --ado-black: #000000;
+  --ado-border: #e6ddd2;
+  --ado-border-strong: #d4c6b6;
+  --ado-surface: #ffffff;
+  --ado-surface-soft: #fff9f2;
+
+  /* DISABLED STATE */
+  --ado-disabled-bg: #e3dbd2;
+  --ado-disabled-border: #e3dbd2;
+  --ado-disabled-text: var(--ado-white);
+
+  /* =========================================================
+   H: TYPOGRAPHY
+========================================================= */
+
+  --ado-font-family-base:
+    "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  --ado-font-weight-regular: 400;
+  --ado-font-weight-medium: 500;
+  --ado-font-weight-semibold: 600;
+  --ado-font-weight-bold: 700;
+
+  --ado-line-height-tight: 1.15;
+  --ado-line-height-heading: 1.2;
+  --ado-line-height-base: 1.55;
+  --ado-line-height-relaxed: 1.7;
+
+  --ado-letter-spacing-tight: -0.02em;
+  --ado-letter-spacing-normal: 0;
+  --ado-letter-spacing-wide: 0.01em;
+
+  /* TYPO SCALE */
+  --ado-font-size-xs: 0.75rem; /* 12px */
+  --ado-font-size-sm: 0.875rem; /* 14px */
+  --ado-font-size-base: 1rem; /* 16px */
+  --ado-font-size-md: 1.0625rem; /* 17px */
+  --ado-font-size-lg: 1.125rem; /* 18px */
+  --ado-font-size-xl: 1.25rem; /* 20px */
+  --ado-font-size-2xl: 1.5rem; /* 24px */
+  --ado-font-size-3xl: 1.875rem; /* 30px */
+  --ado-font-size-4xl: 2.25rem; /* 36px */
+
+  /* RESPONSIVE HEADINGS */
+  --ado-h1-size: clamp(2rem, 1.6rem + 1.5vw, 3.25rem);
+  --ado-h2-size: clamp(1.625rem, 1.35rem + 1vw, 2.5rem);
+  --ado-h3-size: clamp(1.375rem, 1.2rem + 0.7vw, 2rem);
+  --ado-h4-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.5rem);
+  --ado-h5-size: clamp(1.0625rem, 1rem + 0.2vw, 1.25rem);
+  --ado-h6-size: 1rem;
+
+  /* SPECIAL TYPO */
+  --ado-price-size: clamp(1.5rem, 1.3rem + 0.8vw, 2.125rem);
+  --ado-price-size-sm: 1.25rem;
+  --ado-button-font-size: 0.95rem;
+  --ado-label-font-size: 0.875rem;
+  --ado-small-text-size: 0.875rem;
+  --ado-caption-size: 0.75rem;
+
+  /* BOOTSTRAP TYPOGRAPHY MAPPING */
+  --bs-body-font-family: var(--ado-font-family-base);
+  --bs-body-font-size: var(--ado-font-size-base);
+  --bs-body-font-weight: var(--ado-font-weight-regular);
+  --bs-body-line-height: var(--ado-line-height-base);
+
+  --bs-font-sans-serif: var(--ado-font-family-base);
+
+  --bs-heading-color: var(--ado-text-main);
+
+  /* ======================================================
+     H:--
+     H: OVERRIDES
+     BOOTSTRAP 5.3 VARIABLE OVERRIDES
+     Bootstrap 5.3 espone molte variabili CSS runtime:
+     andiamo a pilotare quelle principali dal brand ADO.
+  ====================================================== */
+
+  /* Brand / semantic */
+  --bs-primary: var(--ado-primary);
+  --bs-secondary: var(--ado-text-muted);
+  --bs-success: var(--ado-success);
+  --bs-warning: var(--ado-warning);
+  --bs-danger: var(--ado-danger);
+  --bs-info: var(--ado-info);
+  --bs-light: var(--ado-bg-soft);
+  --bs-dark: var(--ado-text-main);
+
+  /* RGB per componenti Bootstrap che li usano */
+  --bs-primary-rgb: 240, 125, 0;
+  --bs-secondary-rgb: 117, 104, 91;
+  --bs-success-rgb: 46, 125, 50;
+  --bs-warning-rgb: 237, 108, 2;
+  --bs-danger-rgb: 211, 47, 47;
+  --bs-info-rgb: 2, 136, 209;
+  --bs-light-rgb: 255, 249, 242;
+  --bs-dark-rgb: 42, 39, 35;
+
+  /* Body / text / surfaces */
+  --bs-body-color: var(--ado-text-main);
+  --bs-body-color-rgb: 42, 39, 35;
+  --bs-body-bg: var(--ado-white);
+  --bs-body-bg-rgb: 255, 255, 255;
+
+  --bs-emphasis-color: var(--ado-text-main);
+  --bs-secondary-color: var(--ado-text-muted);
+  --bs-secondary-color-rgb: 117, 104, 91;
+
+  --bs-tertiary-bg: var(--ado-bg-soft);
+  --bs-secondary-bg: #f8f4ef;
+
+  /* Borders */
+  --bs-border-color: var(--ado-border);
+  --bs-border-color-translucent: rgba(42, 39, 35, 0.12);
+
+  /* Links */
+  --bs-link-color: var(--ado-primary);
+  --bs-link-color-rgb: 240, 125, 0;
+  --bs-link-hover-color: var(--ado-primary-hover);
+  --bs-link-hover-color-rgb: 255, 149, 36;
+
+  /* Focus ring */
+  --bs-focus-ring-color: rgba(240, 125, 0, 0.25);
+
+  /* Buttons / forms */
+  --bs-btn-border-radius: 0.5rem;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(240, 125, 0, 0.25);
+  --bs-form-valid-border-color: var(--ado-success);
+  --bs-form-valid-color: var(--ado-success);
+  --bs-form-invalid-border-color: var(--ado-danger);
+  --bs-form-invalid-color: var(--ado-danger);
+
+  /* Alerts / subtle variants in Bootstrap 5.3 */
+  --bs-primary-text-emphasis: #7a4100;
+  --bs-primary-bg-subtle: #fff1e2;
+  --bs-primary-border-subtle: #ffd3a7;
+
+  --bs-success-text-emphasis: var(--ado-success-text);
+  --bs-success-bg-subtle: var(--ado-success-bg);
+  --bs-success-border-subtle: var(--ado-success-border);
+
+  --bs-warning-text-emphasis: var(--ado-warning-text);
+  --bs-warning-bg-subtle: var(--ado-warning-bg);
+  --bs-warning-border-subtle: var(--ado-warning-border);
+
+  --bs-danger-text-emphasis: var(--ado-danger-text);
+  --bs-danger-bg-subtle: var(--ado-danger-bg);
+  --bs-danger-border-subtle: var(--ado-danger-border);
+
+  --bs-info-text-emphasis: var(--ado-info-text);
+  --bs-info-bg-subtle: var(--ado-info-bg);
+  --bs-info-border-subtle: var(--ado-info-border);
+}
+
+/* =========================================================
+   H: FALLBACK
+   PRIME SOVRASCRITTURE VISIBILI
+   Serve per i casi in cui il tema abbia valori già “cotti”
+   e non passi dalle variabili CSS.
+========================================================= */
+
+body {
+  background-color: var(--ado-white);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--ado-primary);
+  --bs-btn-border-color: var(--ado-primary);
+  --bs-btn-hover-bg: var(--ado-primary-hover);
+  --bs-btn-hover-border-color: var(--ado-primary-hover);
+  --bs-btn-active-bg: var(--ado-primary-hover);
+  --bs-btn-active-border-color: var(--ado-primary-hover);
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  --bs-btn-disabled-bg: var(--ado-disabled-bg);
+  --bs-btn-disabled-border-color: var(--ado-disabled-border);
+  --bs-btn-disabled-color: var(--ado-disabled-text);
+
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--ado-primary);
+  --bs-btn-border-color: var(--ado-primary);
+  --bs-btn-hover-bg: var(--ado-primary);
+  --bs-btn-hover-border-color: var(--ado-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--ado-primary-hover);
+  --bs-btn-active-border-color: var(--ado-primary-hover);
+}
+
+.text-primary {
+  color: var(--ado-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--ado-primary) !important;
+}
+
+.border-primary {
+  border-color: var(--ado-primary) !important;
+}
+/* H:--
+=========================================================
+   H: GLOBAL TYPOGRAPHY
+========================================================= */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-font-size-base);
+  font-weight: var(--ado-font-weight-regular);
+  line-height: var(--ado-line-height-base);
+  letter-spacing: var(--ado-letter-spacing-normal);
+  color: var(--ado-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+p,
+.p {
+  margin-bottom: 1rem;
+  font-size: var(--ado-font-size-base);
+  line-height: var(--ado-line-height-base);
+}
+
+small,
+.small {
+  font-size: var(--ado-small-text-size);
+  line-height: 1.45;
+}
+
+strong,
+b {
+  font-weight: var(--ado-font-weight-semibold);
+}
+
+em,
+i:not(.material-icons) {
+  font-style: italic;
+}
+/* =========================================================
+   H: HEADINGS
+========================================================= */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: var(--ado-font-family-base);
+  font-weight: var(--ado-font-weight-semibold);
+  line-height: var(--ado-line-height-heading);
+  letter-spacing: var(--ado-letter-spacing-tight);
+  color: var(--ado-text-main);
+}
+
+h1,
+.h1 {
+  font-size: var(--ado-h1-size);
+  font-weight: var(--ado-font-weight-bold);
+  line-height: var(--ado-line-height-tight);
+}
+
+h2,
+.h2 {
+  font-size: var(--ado-h2-size);
+}
+
+h3,
+.h3 {
+  font-size: var(--ado-h3-size);
+}
+
+h4,
+.h4 {
+  font-size: var(--ado-h4-size);
+}
+
+h5,
+.h5 {
+  font-size: var(--ado-h5-size);
+  font-weight: var(--ado-font-weight-semibold);
+}
+
+h6,
+.h6 {
+  font-size: var(--ado-h6-size);
+  font-weight: var(--ado-font-weight-semibold);
+  letter-spacing: var(--ado-letter-spacing-wide);
+}
+/* =========================================================
+   H: UI TEXT HELPERS
+========================================================= */
+
+.text-muted,
+.text-body-secondary,
+.form-text,
+small.text-muted {
+  color: var(--ado-text-muted) !important;
+}
+
+.lead {
+  font-size: var(--ado-font-size-lg);
+  line-height: var(--ado-line-height-relaxed);
+  font-weight: var(--ado-font-weight-regular);
+  color: var(--ado-text-main);
+}
+
+.caption,
+.note,
+.disclaimer {
+  font-size: var(--ado-caption-size);
+  line-height: 1.45;
+  color: var(--ado-text-muted);
+}
+/* =========================================================
+   H: LINKS
+========================================================= */
+
+a:not(.btn) {
+  color: var(--ado-primary);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+  transition: color 0.2s ease;
+}
+
+a:not(.btn):hover,
+a:not(.btn):focus {
+  color: var(--ado-primary-hover);
+}
+/* =========================================================
+   H: BUTTON TYPOGR
+========================================================= */
+
+.btn {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-button-font-size);
+  font-weight: var(--ado-font-weight-semibold);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  font-size: 1rem;
+}
+/* =========================================================
+   H: FORM TYPOGRAPHY
+========================================================= */
+
+label,
+.form-label,
+.product-variant__legend,
+.product-variant__selected {
+  font-size: var(--ado-label-font-size);
+  font-weight: var(--ado-font-weight-medium);
+  line-height: 1.35;
+  color: var(--ado-text-main);
+  margin-bottom: 0.4rem;
+}
+.product-variant__selected {
+  font-weight: 700;
+  transform: translateY(-0.2rem);
+}
+
+input,
+select,
+textarea,
+.form-control,
+.form-select {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-font-size-base);
+  font-weight: var(--ado-font-weight-regular);
+  line-height: 1.4;
+}
+
+::placeholder {
+  color: var(--ado-text-muted);
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: var(--ado-primary);
+
+  box-shadow: 0 0 0 0.25rem var(--bs-focus-ring-color);
+}
+/* =========================================================
+   H: PRICE TYPOGRAPHY
+========================================================= */
+
+/* PDP Hummingbird */
+.product__price,
+.product__prices .current-price,
+.product__prices .price {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-price-size);
+  font-weight: var(--ado-font-weight-bold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ado-text-main);
+}
+
+/* Prezzo barrato / sconto PDP */
+.product__prices .regular-price,
+.product__prices .discount,
+.product__prices .discount-percentage {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-font-size-sm);
+  line-height: 1.3;
+}
+
+.product__prices .regular-price {
+  font-weight: var(--ado-font-weight-medium);
+  color: var(--ado-text-muted);
+  text-decoration: line-through;
+}
+
+.product__prices .discount,
+.product__prices .discount-percentage {
+  font-weight: var(--ado-font-weight-bold);
+}
+
+/* Listing / miniature Hummingbird */
+.product-miniature__price {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-price-size-sm);
+  font-weight: var(--ado-font-weight-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ado-text-main);
+}
+
+.product-miniature__discount-price,
+.product-miniature .regular-price {
+  font-size: var(--ado-font-size-sm);
+  font-weight: var(--ado-font-weight-medium);
+  color: var(--ado-text-muted);
+  text-decoration: line-through;
+}
+
+/* Fallback PS core */
+.price,
+.current-price,
+.regular-price,
+.discount-percentage {
+  font-family: var(--ado-font-family-base);
+}
+/* =========================================================
+   H: PRODUCT DISCOUNT BADGE
+========================================================= */
+
+.product__discount-percentage,
+.product__discount-amount {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  margin-left: 0.4rem;
+  border: 1px solid var(--bs-primary-border-subtle);
+  border-radius: 0.35rem;
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--ado-primary);
+  font-size: var(--ado-font-size-xs);
+  font-weight: var(--ado-font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+/* =========================================================
+   H: PROD CARD TYPOGR
+========================================================= */
+
+.product-miniature__title {
+  font-size: var(--ado-font-size-base);
+  font-weight: var(--ado-font-weight-semibold);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--ado-text-main);
+  text-decoration: none;
+}
+
+.product-miniature__title:hover,
+.product-miniature__title:focus {
+  color: var(--ado-primary-hover);
+}
+
+.product-miniature__add,
+.product-miniature__add-text {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-font-size-sm);
+  font-weight: var(--ado-font-weight-semibold);
+  line-height: 1.2;
+}
+/* =========================================================
+   H: PROD PAGE TYPOGR
+========================================================= */
+
+.product__manufacturer {
+  font-size: var(--ado-font-size-sm);
+  font-weight: var(--ado-font-weight-medium);
+  line-height: 1.4;
+  color: var(--ado-text-muted);
+}
+
+.product__add-to-cart-button {
+  font-family: var(--ado-font-family-base);
+  font-size: var(--ado-font-size-base);
+  font-weight: var(--ado-font-weight-semibold);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+/* =========================================================
+   H: PROD DETAILS TYP.
+========================================================= */
+
+.details__list {
+  font-size: var(--ado-font-size-sm);
+}
+
+.details__item {
+  line-height: 1.45;
+}
+
+.details__title {
+  font-weight: var(--ado-font-weight-semibold);
+  color: var(--ado-text-main);
+}
+
+.details__right {
+  color: var(--ado-text-muted);
+}
+
+.details__item--reference .details__right,
+.details__item--manufacturer .details__right {
+  font-weight: var(--ado-font-weight-medium);
+}
+
+/* =========================================================
+   H: CONTENT TYPOGR
+========================================================= */
+
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+  line-height: var(--ado-line-height-base);
+}
+
+table {
+  font-size: var(--ado-font-size-sm);
+}
+
+th {
+  font-weight: var(--ado-font-weight-semibold);
+}
+
+td,
+th {
+  line-height: 1.45;
+}
+/*
+===================================
+H: FOOTER PAYOFF
+===================================
+Stile del payoff istituzionale ADO.
+Riutilizzabile anche in altri punti del tema.
+*/
+
+.ado-footer__payoff {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ado-bg-soft);
+}
+/* =========================================================
+   H: MOBILE TYPOGRAPHY
+   REFINEMENTS
+========================================================= */
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 0.97rem;
+  }
+
+  .btn {
+    font-size: 0.92rem;
+  }
+
+  .current-price,
+  .product-price,
+  .final-price {
+    font-size: clamp(1.35rem, 1.2rem + 1vw, 1.75rem);
+  }
+}
