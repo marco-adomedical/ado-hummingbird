@@ -4,11 +4,11 @@
   {*
     ===================================
     H: MANUFACTURER
-    - lista prodotti di un Brand
+    - Lista prodotti di un brand
     ===================================
 
     Header custom pagina brand:
-    - titolo pulito (solo nome brand)
+    - titolo chiaro e leggibile
     - logo brand in evidenza
     - short description opzionale
     - description lunga sotto
@@ -24,7 +24,6 @@
 
   <section class="ado-brand-header">
     <div class="ado-brand-header__inner">
-
       <div class="ado-brand-header__logo">
         <img src="{$brandLogo|escape:'html':'UTF-8'}" alt="{$manufacturer.name|escape:'html':'UTF-8'}" loading="eager"
           decoding="async">
@@ -32,7 +31,7 @@
 
       <div class="ado-brand-header__content">
         <h1 class="ado-brand-header__title h2 mb-2">
-          {$manufacturer.name}
+          {l s='%brand% - products available' sprintf=['%brand%' => $manufacturer.name] d='Shop.Theme.Catalog'}
         </h1>
 
         {if $manufacturer.short_description}
@@ -41,7 +40,6 @@
           </div>
         {/if}
       </div>
-
     </div>
 
     {if $manufacturer.description}
@@ -49,6 +47,5 @@
         {$manufacturer.description nofilter}
       </div>
     {/if}
-
   </section>
 {/block}
